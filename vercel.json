@@ -1,0 +1,45 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "compete.avtsa.com"
+        }
+      ],
+      "destination": "https://www.avtsa.com/compete"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "schedule.avtsa.com"
+        }
+      ],
+      "destination": "https://docs.google.com/document/d/1VcWSuumkwqBJjtV8aQh0mOaQEwNBEa-O7wua2LxDlkI/edit"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "map.avtsa.com"
+        }
+      ],
+      "destination": "https://www.avtsa.com/bay-tsa-schedule-and-calendar.pdf"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "join.avtsa.com"
+        }
+      ],
+      "destination": "https://forms.gle/RZh8bdAnFQfvYNJw7"
+    }
+  ]
+}

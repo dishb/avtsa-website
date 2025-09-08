@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #2a1044;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: monospace;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.animate-bobbing {
+  animation: bobbing 2s infinite ease-in-out;
+}
+
+@keyframes bobbing {
+  0%,
+  100% {
+    transform: translateY(6px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
