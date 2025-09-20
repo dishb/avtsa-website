@@ -14,35 +14,6 @@ from json import dump
 from bs4 import BeautifulSoup
 from requests import get
 
-# pylint: disable=too-few-public-methods, too-many-arguments, too-many-positional-arguments
-class Event():
-    """
-    A class to represent an event, should match with `../src/types/EventProps.d.ts`.
-    """
-
-    def __init__(self,
-                 title: str,
-                 description: str,
-                 theme: str
-                 ) -> None:
-        self.title = title
-        self.description = description
-        self.theme = theme
-
-    def to_dict(self) -> dict:
-        """
-        Serializes the class to a dictionary, for `json.dump`.
-
-        Returns:
-            dict: A dictionary to represent each field in the class.
-        """
-
-        return {
-            "title": self.title,
-            "description": self.description,
-            "theme": self.theme
-        }
-
 REPLACEMENTS = {"\u2018": "'",
                 "\u2019": "'",
                 "\u201c": '"',
@@ -53,7 +24,7 @@ REPLACEMENTS = {"\u2018": "'",
                 "\ufb01": "fi"
                 }
 DATA_FILE_PATH = Path("../src/data/events.json")
-ALL_EVENTS: list[Event] = []
+ALL_EVENTS: dict[dict] = {}
 
 def clean_text(text: str) -> str:
     """
@@ -90,6 +61,10 @@ if __name__ == "__main__":
                     event_description = clean_text(event_card.find("div", class_ = "sf-Long-text").text)
                     # pylint: enable=line-too-long
 
+                    ALL_EVENTS[event_title] = {}
+                    ALL_EVENTS[event_title]["title"] = event_title
+                    ALL_EVENTS[event_title]["description"] = event_description
+
     for page_num in range(1, 5):
         response = get(f"https://tsaweb.org/competitions/themes-and-problems?hspage={page_num}",
                        timeout = 60
@@ -101,6 +76,10 @@ if __name__ == "__main__":
                 if event_card:
                     event_title = clean_text(event_card.find("p").text)
                     event_theme = clean_text(event_card.find("div").text)
+
+                    ALL_EVENTS[event_title]["theme"] = event_theme
+                else:
+                    ALL_EVENTS[event_title]["theme"] = "No theme for this event."
 
     if exists(DATA_FILE_PATH):
         remove(DATA_FILE_PATH)

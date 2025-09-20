@@ -12,7 +12,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AVTSA",
+  title: "AV TSA",
   description: "Amador Valley Technology Student Association",
 };
 
