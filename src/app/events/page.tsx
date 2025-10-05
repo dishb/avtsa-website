@@ -1,8 +1,5 @@
 import Event from "@/components/Event";
 import events from "@/data/events.json";
-import type EventProps from "@/types/EventProps";
-
-const eventData: EventProps[] = events as EventProps[];
 
 export default function Page() {
   return (
