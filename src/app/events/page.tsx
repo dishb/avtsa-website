@@ -1,4 +1,8 @@
 import Event from "@/components/Event";
+import events from "@/data/events.json";
+import type EventProps from "@/types/EventProps";
+
+const eventData: EventProps[] = events as EventProps[];
 
 export default function Page() {
   return (
@@ -19,7 +23,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-6 px-10">
+      <div className="grid grid-cols-4 gap-6 px-10 mt-10">
         {events.map((event, index) => (
           <Event key={index} {...event} />
         ))}

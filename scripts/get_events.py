@@ -70,18 +70,27 @@ if __name__ == "__main__":
                        timeout = 60
                        )
         soup = BeautifulSoup(response.content, "html.parser")
-        event_cards = soup.find("div", class_ = "cards")
+        section = soup.find("section", class_="hs definition-list tabs")
+        event_cards = section.find("div", class_ = "cards")
         if event_cards:
             for event_card in event_cards.find_all("div", class_ = "card"):
                 if event_card:
                     event_title = clean_text(event_card.find("p").text)
                     event_theme = clean_text(event_card.find("div").text)
 
+                    # pylint: disable=invalid-name
+                    if event_title == "Biotechnology":
+                        event_title = "Biotechnology Design"
+                    elif event_title == "Dragster":
+                        event_title = "Dragster Design"
+
                     ALL_EVENTS[event_title]["theme"] = event_theme
-                else:
-                    ALL_EVENTS[event_title]["theme"] = "No theme for this event."
+
+    for event in ALL_EVENTS.values():
+        if "theme" not in event:
+            event["theme"] = "No theme for this event."
 
     if exists(DATA_FILE_PATH):
         remove(DATA_FILE_PATH)
     with open(DATA_FILE_PATH, "x", encoding = "utf-8") as file:
-        dump(ALL_EVENTS, file, indent = 2)
+        dump(list(ALL_EVENTS.values()), file, indent = 2)

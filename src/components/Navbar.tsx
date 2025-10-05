@@ -4,11 +4,12 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import navItems from "@/data/navItems";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Navbar() {
   const navbarRef = useRef<HTMLElement>(null);
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     function changeNavbar() {
@@ -49,15 +50,20 @@ export default function Navbar() {
       </button>
 
       <div className="flex-1 flex justify-center gap-16">
-        {navItems.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
-            className="font-bold text-lg hover:underline decoration-amber-500 decoration-3"
-          >
-            {item.title}
-          </Link>
-        ))}
+        {navItems.map((item, index) => {
+          const isActive = pathname === item.href;
+          return (
+            <Link
+              key={index}
+              href={item.href}
+              className={`font-bold text-lg decoration-amber-500 decoration-3 ${
+                isActive ? "underline" : "hover:underline"
+              }`}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
       </div>
 
       <div className="p-0.75 rounded-md bg-gradient-to-b from-amber-500 to-purple-900 hover:bg-[#2A1044]">
