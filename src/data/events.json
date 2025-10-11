@@ -7,7 +7,7 @@
   {
     "title": "Architectural Design",
     "description": "In response to the annual design challenge, participants develop a set of architectural plans and related materials, and construct both a physical and computer-generated model to accurately depict their design. Semifinalists deliver a presentation and participate in an interview.",
-    "theme": "Design Problem"
+    "theme": "https://tsaweb.org/docs/default-source/competitions/themes-and-problems-2025-2026/2026-architectural-design-problem.pdf?sfvrsn=4af21af4_1"
   },
   {
     "title": "Audio Podcasting",
@@ -37,7 +37,7 @@
   {
     "title": "Coding",
     "description": "Participants take a test, which concentrates on aspects of coding, to qualify for the semifinal round of competition. Semifinalists develop a software program - in a designated amount of time - that accurately addresses an onsite problem.",
-    "theme": "The following programming languages may be used to complete the assigned problems: C version C17, C++ version C++20, C# version 8, Java version 21.0, Javascript/Node version 18.19, Python version 3.9, Ruby version 3.2, Rust version 1.75, Swift version 5.10"
+    "theme": "The following programming languages may be used to complete the assigned problems: C version C17, C++ version C++20, C# version 8, Java version 21.0, Javascript / Node version 18.19, Python version 3.9, Ruby version 3.2, Rust version 1.75, Swift version 5.10"
   },
   {
     "title": "Computer-Aided Design (CAD), Architecture",
@@ -52,12 +52,12 @@
   {
     "title": "Data Science and Analytics",
     "description": "Participants identify a societal issue, collect or compile data from various sources about the issue, and then produce documentation and a digital scientific poster about their findings. Semifinalists create a synopsis and digital visual representation of a data set provided in an onsite challenge.",
-    "theme": "Identify and use a \"Tourism\"- related open-source data set for analysis and research. In the scientific poster, cite the source of the data, including the URL/domain and file format. Scientific Poster Template"
+    "theme": "Identify and use a \"Tourism\" related open-source data set for analysis and research. In the scientific poster, cite the source of the data, including the URL/domain and file format. Scientific Poster Template"
   },
   {
     "title": "Debating Technological Issues",
     "description": "Participants research the annual topic and subtopics and prepare for a debate against a team from another chapter. Teams are instructed to take either the pro or con side of a selected subtopic, submit a summary of references, and use their research to support their assigned position. The quality of a team's debate determines semifinalists and finalists.",
-    "theme": "Artificial Intelligence and Ethics. Subtopic 1: AI decision-making in judicial systems introduces bias and undermines human moral judgment. Subtopic 2: The development of artificial general intelligence (AGI) poses a greater existential threat than nuclear weapons. Subtopic 3: AI-generated art and literature diminish the value of human creativity and cultural authenticity."
+    "theme": "Artificial Intelligence and Ethics. Subtopic 1: AI decision-making in judicial systems introduces bias and undermines human moral judgment.Subtopic 2: The development of artificial general intelligence (AGI) poses a greater existential threat than nuclear weapons.Subtopic 3: AI-generated art and literature diminish the value of human creativity and cultural authenticity."
   },
   {
     "title": "Digital Video Production",
@@ -72,7 +72,7 @@
   {
     "title": "Drone Challenge (UAV)",
     "description": "Participants design, build, assemble, document, and test fly an open-source Unmanned Arial Vehicle (UAV) according to the stated annual theme/problem specifications. The required documentation portfolio must include elements such as a photographic log, wiring schematics, and a description of the programming software used. Semifinalists participate in an interview.",
-    "theme": "Theme"
+    "theme": "https://tsaweb.org/docs/default-source/competitions/themes-and-problems-2025-2026/2026-hs_uav-drone.pdf?sfvrsn=28e74e45_3"
   },
   {
     "title": "Engineering Design",
@@ -107,7 +107,7 @@
   {
     "title": "Geospatial Technology",
     "description": "To address the issue presented in an annual theme, participants interpret geospatial data and develop a digital portfolio containing maps, data, and pertinent documentation. Semifinalists defend their projections and visual infographic during a presentation/interview.",
-    "theme": "Urban Heat Islands and Cooling Solutions. Identify urban heat island (UHI) hotspots in your area using temperature, vegetation, and land use data. Map areas most affected by heat and propose equitable solutions-such as tree planting zones, reflective surfaces, or community cooling centers-especially in vulnerable neighborhoods."
+    "theme": "Urban Heat Islands and Cooling SolutionsIdentify urban heat island (UHI) hotspots in your area using temperature, vegetation, and land use data. Map areas most affected by heat and propose equitable solutions-such as tree planting zones, reflective surfaces, or community cooling centers-especially in vulnerable neighborhoods."
   },
   {
     "title": "Manufacturing Prototype",
@@ -127,7 +127,7 @@
   {
     "title": "Photographic Technology",
     "description": "Participants produce a photographic portfolio - demonstrating expertise in photo and imaging technology processes - to convey a message based on the annual theme. Semifinalists have 24 hours to complete a portfolio of photos (with required documentation) taken onsite at the national TSA conference. Finalists are determined based on the quality of the semifinal portfolio, the portfolio presentation, and interview responses.",
-    "theme": "Photo Essay Series; Create a series of photos that tell a story"
+    "theme": "Photo Essay Series. Create a series of photos that tell a story"
   },
   {
     "title": "Prepared Presentation",
@@ -142,7 +142,7 @@
   {
     "title": "Robotics",
     "description": "Participants design, build, document, and test a robot assembled using open-sourced parts according to stated specifications and to meet the challenge of the yearly theme/problem.",
-    "theme": "Theme"
+    "theme": "https://tsaweb.org/docs/default-source/competitions/themes-and-problems-2025-2026/2026-hs-robotics.pdf?sfvrsn=2849ac4c_1"
   },
   {
     "title": "Senior Solar Sprint",
@@ -162,7 +162,7 @@
   {
     "title": "Structural Design and Engineering",
     "description": "Participants apply the principles of structural engineering to design and construct a structure that complies with the annual challenge. An assessment of the required documentation and the destructive testing of the structure (to determine its design efficiency) determine both semifinalists and finalists.",
-    "theme": "Problem Statement. Verification Form"
+    "theme": "https://tsaweb.org/docs/default-source/competitions/themes-and-problems-2025-2026/2026-hs-structural-design-and-engineering-problem-statement.pdf?sfvrsn=def98886_1 https://tsaweb.org/docs/default-source/competitions/themes-and-problems-2025-2026/2026-hs-structural-verification-form.pdf?sfvrsn=fcb8845c_1"
   },
   {
     "title": "System Control Technology",
@@ -182,21 +182,21 @@
   {
     "title": "Transportation Modeling",
     "description": "Participants research, design, and produce a scale model of a vehicle that complies with the annual design problem. A display for the model and a documentation portfolio - containing elements such as a description of the vehicle, photographs and commentary detailing the vehicle production, and technical illustrations - are required. Semifinalists participate in an interview.",
-    "theme": "Design Problem: The Sky is Not the Limit- Next-gen space travel."
+    "theme": "The Sky is Not the Limit. Next-gen space travel."
   },
   {
     "title": "Video Game Design",
     "description": "Participants design, build, and launch an E-rated online video game - with accompanying required documentation - that addresses the annual theme. Semifinalists participate in an interview to demonstrate the knowledge and expertise they gained during the development of the game.",
-    "theme": "Retro Revival: Reimagine an 8-bit or 16-bit era type of game with a modern twist.The game must be inspired by 8-bit or 16-bit era games, but may not contain any recognizable characters, music, or storylines from these games. Competitors are encouraged to research games from this era but not utilize copyrighted material."
+    "theme": "Retro Revival: Reimagine an 8-bit or 16-bit era type of game with a modern twist. The game must be inspired by 8-bit or 16-bit era games, but may not contain any recognizable characters, music, or storylines from these games. Competitors are encouraged to research games from this era but not utilize copyrighted material."
   },
   {
     "title": "Virtual Reality Simulation (VR)",
     "description": "Participants use video and 3D computer graphics tools and design processes to create a two-to-three-minute VR visualization (accompanied by supporting documentation) that addresses the annual theme. Semifinalists deliver a presentation about their visualization and participate in an interview.",
-    "theme": "Design Design an interactive, walk-through VR museum based on a topic in art, history, or technology."
+    "theme": "Design an interactive, walk-through VR museum based on a topic in art, history, or technology."
   },
   {
     "title": "Webmaster",
     "description": "Participants design, build, and launch a website that addresses the annual challenge. Semifinalists participate in an interview to demonstrate the knowledge and expertise gained during the development of the website.",
-    "theme": "Community Resource HubCreate a website that will serve as a community resource hub to highlight resources available to residents within the community (e.g., non-profits, support services, community events and programs, etc.). According to the official rules, do not include school or chapter name. Your website should include the following: an interactive directory of community resources (resource hub) that allows users to search and filter the resources. a highlight section that spotlights at least three of the community resources you have listed in your resource hub. a form that users can submit to indicate new resources that should be added to the community resources hub. additional content to enhance the community resource hub for end users."
+    "theme": "Community Resource HubCreate a website that will serve as a community resource hub to highlight resources available to residents within the community (e.g., non-profits, support services, community events and programs, etc.). Your entry for this event is an exception to the general rules for the 2026 National TSA Conference regarding identifying information and you may include school or chapter name if it is the same name as the community used. Your website should include the following: an interactive directory of community resources (resource hub) that allows users to search and filter the resources. a highlight section that spotlights at least three of the community resources you have listed in your resource hub. a form that users can submit to indicate new resources that should be added to the community resources hub. additional content to enhance the community resource hub for end users."
   }
 ]
