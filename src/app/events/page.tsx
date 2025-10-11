@@ -5,7 +5,8 @@ export default function Page() {
   return (
     <>
       <div className="relative h-150 p-6 bg-gradient-to-b from-amber-500 to-purple-900">
-        <div className="relative h-full rounded-xl bg-background/85">
+        <div className="relative h-full rounded-xl overflow-hidden bg-[url(/photos/2.jpg)] bg-cover bg-[0%_80%]">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2A1044]/40 to-[#2A1044]/90" />
           <div className="relative z-10 h-full w-full flex justify-evenly items-center">
             <div className="max-w-[40%]">
               <h1 className="text-6xl font-bold">Events</h1>

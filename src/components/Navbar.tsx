@@ -56,8 +56,8 @@ export default function Navbar() {
             <Link
               key={index}
               href={item.href}
-              className={`font-bold text-lg decoration-amber-500 decoration-3 ${
-                isActive ? "underline" : "hover:underline"
+              className={`font-bold text-lg underline decoration-3 transition-all ease-in-out duration-200 hover:decoration-amber-500 ${
+                isActive ? "decoration-amber-500" : "decoration-transparent"
               }`}
             >
               {item.title}
