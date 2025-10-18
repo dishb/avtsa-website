@@ -4,6 +4,15 @@ import { useState } from "react";
 import EventProps from "@/types/EventProps";
 import { X } from "lucide-react";
 import Link from "next/link";
+import { IBM_Plex_Sans } from "next/font/google";
+
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-ibm-plex-sans",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+});
 
 function extractLinks(text: string): string[] {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -26,11 +35,11 @@ export default function Event({ title, description, theme }: EventProps) {
       <div className="relative max-h-100 overflow-hidden border-2 border-purple-900 bg-purple-900/10 rounded-xl p-6 text-white">
         <h3 className="text-2xl font-bold text-purple-300 mb-4">{title}</h3>
 
-        <p className="text-sm mb-4">
+        <p className={`${ibmPlexSans.className} text-sm mb-4`}>
           <span className="text-amber-500">Description:</span> {description}
         </p>
 
-        <p className="text-sm">
+        <p className={`${ibmPlexSans.className} text-sm`}>
           <span className="text-amber-500">Theme:</span>{" "}
           <span>{themeText}</span>
           {links.length > 0 &&
@@ -69,12 +78,12 @@ export default function Event({ title, description, theme }: EventProps) {
             >
               <X />
             </button>
-            <h3 className="text-2xl font-bold text-purple-700 mb-4">{title}</h3>
-            <p className="mb-4 leading-snug">
+            <h3 className="text-2xl font-bold text-purple-800 mb-4">{title}</h3>
+            <p className={`mb-4 leading-snug ${ibmPlexSans.className}`}>
               <span className="font-semibold text-amber-600">Description:</span>{" "}
               {description}
             </p>
-            <p className="leading-snug">
+            <p className={`leading-snug ${ibmPlexSans.className}`}>
               <span className="font-semibold text-amber-600">Theme:</span>{" "}
               <span>{themeText}</span>
               {links.length > 0 &&

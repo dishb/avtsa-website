@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 import titles from "@/data/titles";
-import { IBM_Plex_Sans } from "next/font/google";
 import { Hammer, Swords, Crown } from "lucide-react";
+import { IBM_Plex_Sans } from "next/font/google";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
