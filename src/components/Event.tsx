@@ -55,7 +55,7 @@ export default function Event({ title, description, theme }: EventProps) {
       </div>
       {isExpanded && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+          className="fixed inset-0 px-6 z-50 flex items-center justify-center bg-black/50"
           onClick={() => setIsExpanded(false)}
         >
           <div

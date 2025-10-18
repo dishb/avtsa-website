@@ -37,10 +37,10 @@ export default function Page() {
     <>
       <div className="relative h-screen p-6 bg-gradient-to-b from-amber-500 to-purple-900">
         <div className="relative h-full rounded-xl overflow-hidden bg-[url(/photos/1.png)] bg-cover bg-center">
-          <div className="absolute inset-0 bg-radial-[at_75%_50%] from-[#2A1044]/10 to-[#2A1044]/90 to-50%" />
+          <div className="absolute inset-0 opacity-80 bg-[#2A1044] md:bg-radial-[at_75%_50%] md:from-[#2A1044]/10 md:to-[#2A1044]/90 to-50%" />
           <div className="relative z-10 h-full w-full flex justify-evenly items-center">
-            <div className="max-w-[40%]">
-              <h1 className="text-6xl font-bold">
+            <div className="max-w-[90%] md:max-w-[40%]">
+              <h1 className="text-4xl text-center md:text-left md:text-6xl font-bold">
                 A community of Amador Valley&apos;s{" "}
                 <span
                   className={`pb-2 bg-gradient-to-b from-amber-500 from-40% to-purple-900 text-transparent bg-clip-text inline-block transition-all duration-500 ease-in-out transform ${
@@ -53,12 +53,12 @@ export default function Page() {
                 </span>
               </h1>
 
-              <h2 className="mt-12 text-3xl text-purple-300">
+              <h2 className="mt-12 text-3xl text-center md:text-left text-purple-300">
                 TSA has something for <span className="italic">everyone</span>.
               </h2>
             </div>
 
-            <div className="min-w-[40%]" />
+            <div className="hidden md:block min-w-[40%]" />
 
             <button
               className="absolute bottom-3 animate-bobbing"
@@ -75,13 +75,13 @@ export default function Page() {
 
       <div
         id="main-content"
-        className="h-screen flex flex-col justify-center items-center"
+        className="mt-20 md:mt-0 min-h-screen flex flex-col justify-center items-center"
       >
-        <div className="flex items-center justify-evenly w-full h-90">
+        <div className="flex flex-col md:flex-row items-center justify-evenly w-full md:h-90 space-y-8">
           <div className="h-full p-2 rounded-lg bg-gradient-to-b from-amber-500 to-purple-900 hover:bg-[#2A1044]">
             <div className="w-75 h-full rounded-lg bg-background/80 flex flex-col items-center px-4 py-6">
               <Hammer size={72} className="text-purple-300" />
-              <h2 className="text-2xl font-bold mt-4">Build</h2>
+              <h2 className="text-2xl font-bold mt-4 mb-2">Build</h2>
               <p
                 className={`flex flex-col justify-center w-full h-full ${ibmPlexSans.className}`}
               >
@@ -95,7 +95,7 @@ export default function Page() {
           <div className="h-full p-2 rounded-lg bg-gradient-to-b from-amber-500 to-purple-900 hover:bg-[#2A1044]">
             <div className="w-75 h-full rounded-lg bg-background/80 flex flex-col items-center px-4 py-6">
               <Swords size={72} className="text-purple-300" />
-              <h2 className="text-2xl font-bold mt-4">Compete</h2>
+              <h2 className="text-2xl font-bold mt-4 mb-2">Compete</h2>
               <p
                 className={`flex flex-col justify-center w-full h-full ${ibmPlexSans.className}`}
               >
@@ -109,7 +109,7 @@ export default function Page() {
           <div className="h-full p-2 rounded-lg bg-gradient-to-b from-amber-500 to-purple-900 hover:bg-[#2A1044]">
             <div className="w-75 h-full rounded-lg bg-background/80 flex flex-col items-center px-4 py-6">
               <Crown size={72} className="text-purple-300" />
-              <h2 className="text-2xl font-bold mt-4">Win</h2>
+              <h2 className="text-2xl font-bold mt-4 mb-2">Win</h2>
               <p
                 className={`flex flex-col justify-center w-full h-full ${ibmPlexSans.className}`}
               >
