@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 import titles from "@/data/titles";
+import rotatingText from "@/data/rotatingText";
 import { Hammer, Swords, Crown } from "lucide-react";
 import { IBM_Plex_Sans } from "next/font/google";
 
@@ -54,11 +55,38 @@ export default function Page() {
               </h1>
 
               <h2 className="mt-12 text-3xl text-center md:text-left text-purple-300">
-                TSA has something for <span className="italic">everyone</span>.
+                TSA offers something for{" "}
+                <span className="italic">everyone</span>.
               </h2>
             </div>
 
-            <div className="hidden md:block min-w-[40%]" />
+            <div className="hidden md:flex min-w-[40%] items-center justify-center">
+              <div className="w-56 md:w-80 lg:w-[30rem] h-56 md:h-80 lg:h-[30rem] relative">
+                <svg
+                  viewBox="0 0 350 350"
+                  className="w-full h-full"
+                  role="img"
+                  aria-label="Rotating circle text"
+                >
+                  <defs>
+                    <path
+                      id="circlePath"
+                      d="M175,175 m0,-150 a150,150 0 1,1 0,300 a150,150 0 1,1 0,-300"
+                    />
+                  </defs>
+
+                  <g className="origin-center [transform-box:view-box] animate-spinning">
+                    <text fill="#FFBF00" fontWeight="700" letterSpacing="1.25">
+                      <textPath href="#circlePath" startOffset="0%">
+                        {Array(rotatingText.length)
+                          .fill(rotatingText.join(" • "))
+                          .join(" • ")}
+                      </textPath>
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </div>
 
             <button
               className="absolute bottom-3 animate-bobbing"

@@ -65,7 +65,7 @@ export default function Navbar() {
 
       <nav
         ref={navbarRef}
-        className="w-screen flex justify-between items-center fixed top-0 z-50 px-10 pt-10 pb-4 transition-all duration-200"
+        className="w-screen flex justify-between items-center fixed top-0 z-50 px-16 pt-10 pb-4 transition-all duration-200"
       >
         <button
           className="w-24 flex items-center"

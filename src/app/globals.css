@@ -26,6 +26,10 @@ button:hover {
   animation: bobbing 2s infinite ease-in-out;
 }
 
+.animate-spinning {
+  animation: spin 18s linear infinite;
+}
+
 @keyframes bobbing {
   0%,
   100% {
@@ -33,5 +37,36 @@ button:hover {
   }
   50% {
     transform: translateY(-6px);
+  }
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+svg text {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  svg text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  svg text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  svg text {
+    font-size: 24px;
   }
 }
