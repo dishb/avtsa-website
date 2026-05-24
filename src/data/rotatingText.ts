@@ -3,7 +3,7 @@ const rotatingText = [
   "Leadership",
   "Innovation",
   "STEAM",
-  "Creativity"
+  "Creativity",
 ];
 
 export default rotatingText;
