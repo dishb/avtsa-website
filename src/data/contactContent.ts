@@ -9,7 +9,7 @@ export const contactIntro = {
   title: "Reach Out",
   paragraphs: [
     "Questions about joining, events, or competition deadlines? We'd love to hear from you. Use the contacts below or stop by a chapter meeting.",
-    "Replace this paragraph with specific guidance - who to email for registration, mentorship, or general questions.",
+    "More info coming soon!",
   ],
 };
 
@@ -41,22 +41,23 @@ export const contactMethods = [
 
 export const officersContact = {
   title: "Officers",
-  intro: "Edit names and emails for each role. Remove roles you do not use.",
+  intro:
+    "You can contact the officer team directly via email or Discord for specific questions about events, membership, or chapter activities.",
   contacts: [
     {
-      role: "President",
-      name: "Your Name",
-      email: "president@example.com",
+      role: "Co-President",
+      name: "Kethan Vegunta",
+      email: "kv0473@pleasantonusd.net",
     },
     {
-      role: "Vice President",
-      name: "Your Name",
-      email: "vp@example.com",
+      role: "Co-President",
+      name: "Dishant Bhandula",
+      email: "db1519@pleasantonusd.net",
     },
     {
-      role: "Events Lead",
-      name: "Your Name",
-      email: "events@example.com",
+      role: "VP of Communications",
+      name: "Aditya Nalabotu",
+      email: "an1039@pleasantonusd.net",
     },
   ],
 };
@@ -67,17 +68,17 @@ export const faqSection = {
     {
       question: "Do I need prior experience to join?",
       answer:
-        "Replace with your answer. Many members start with no competition experience - curiosity and commitment matter most.",
+        "More info coming soon! Ask questions in the Discord server for now.",
     },
     {
       question: "How many events can I compete in?",
       answer:
-        "Replace with your chapter rules on event limits and qualification requirements.",
+        "More info coming soon! Ask questions in the Discord server for now.",
     },
     {
       question: "When does the competition season start?",
       answer:
-        "Replace with your timeline - chapter competitions, regionals, and nationals dates.",
+        "More info coming soon! Ask questions in the Discord server for now.",
     },
   ],
 };

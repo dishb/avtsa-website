@@ -2,7 +2,6 @@ export const homeIntro = {
   title: "Technology Student Association at Amador Valley",
   paragraphs: [
     "AV TSA is where students design, build, present, and compete across dozens of STEM and leadership events. Whether you code, speak, engineer, or create - there is a place for you here.",
-    "Replace this paragraph with your own welcome message, meeting highlights, or what makes this year's chapter special.",
   ],
 };
 

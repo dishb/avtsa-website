@@ -10,7 +10,7 @@ export const competeIntro = {
   title: "Your Competition Journey",
   paragraphs: [
     "TSA competition is a season-long process: pick events, build your submissions, compete at chapter level, and advance through regionals to nationals if you qualify.",
-    "Replace this paragraph with AV TSA-specific details - registration fees, sign-up deadlines, and how to choose your first events.",
+    "More info coming soon! For now checkout the Discord server for updates and ask questions in the #general channel.",
   ],
 };
 
@@ -77,12 +77,12 @@ export const competeTips = [
   },
   {
     title: "Balance Your Load",
-    body: "Replace with your chapter guidance on how many events students typically take on.",
+    body: "More info coming soon!",
   },
 ];
 
 export const competeCta = {
   title: "Ready to compete?",
   description:
-    "Browse all 40 events, join the chapter, and check the schedule for key dates.",
+    "Browse all 40 events, join the chapter, and check the schedule and Discord #announcements for key dates.",
 };
