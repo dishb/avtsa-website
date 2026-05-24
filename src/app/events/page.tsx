@@ -1,13 +1,27 @@
 "use client";
 
-import React, { useMemo, useState, useRef } from "react";
+import { useMemo, useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Event from "@/components/Event";
+import PageHero from "@/components/PageHero";
+import PageContainer from "@/components/PageContainer";
+import MotionInView from "@/components/MotionInView";
 import events from "@/data/events.json";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import { fadeInUp, defaultTransition } from "@/lib/motion";
+
+const eventsHero = {
+  title: "Events",
+  subtitle: "Find quick overviews of each event that TSA offers!",
+  image: "/photos/2.jpg",
+  imagePosition: "0% 80%",
+};
 
 export default function Page() {
   const [query, setQuery] = useState("");
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   const filteredEvents = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -15,66 +29,85 @@ export default function Page() {
     return events.filter((ev) => (ev.title ?? "").toLowerCase().includes(q));
   }, [query]);
 
-  const clearQuery = () => {
-    setQuery("");
-    inputRef.current?.focus();
-  };
-
   return (
     <>
-      <div className="relative h-150 p-6 bg-gradient-to-b from-amber-500 to-purple-900">
-        <div className="relative h-full rounded-xl overflow-hidden bg-[url(/photos/2.jpg)] bg-cover bg-[0%_80%]">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2A1044]/40 to-[#2A1044]/90" />
-          <div className="relative z-10 h-full w-full flex justify-evenly items-center px-4">
-            <div className="md:max-w-[40%]">
-              <h1 className="text-6xl font-bold">Events</h1>
+      <PageHero {...eventsHero} />
 
-              <h2 className="mt-12 text-3xl text-purple-300">
-                Find quick overviews of each event that TSA offers!
-              </h2>
-            </div>
-
-            <div className="hidden md:block min-w-[40%]" />
-          </div>
-        </div>
-      </div>
-
-      <div className="px-10 mt-6">
-        <div className="max-w-3xl mx-auto md:mx-0">
-          <div className="relative w-full md:w-1/2">
-            <input
-              type="text"
-              ref={inputRef}
+      <PageContainer className="pb-16">
+        <MotionInView className="mt-6 sm:mt-8 w-full">
+          <p className="mb-4 font-sans text-white/70 text-sm sm:text-base">
+            Search by event name. Click &quot;See more&quot; on any card for the
+            full description and theme.
+          </p>
+          <div className="relative w-full max-w-xl">
+            <Input
+              type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search events by title..."
-              className="w-full  p-3 rounded-lg bg-white/10 placeholder:text-white text-white border border-white/20 focus:outline-none pr-10"
               aria-label="Search events by title"
+              className="h-11 sm:h-12 w-full bg-white/10 border-white/20 text-white placeholder:text-white/60 pr-11 font-sans text-base focus-visible:border-amber-500/50 focus-visible:ring-amber-500/30"
             />
+            <AnimatePresence>
+              {query !== "" && (
+                <motion.div
+                  initial={
+                    prefersReducedMotion ? false : { opacity: 0, scale: 0.8 }
+                  }
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute right-1 top-1/2 -translate-y-1/2"
+                >
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon-sm"
+                    onClick={() => setQuery("")}
+                    aria-label="Clear search"
+                    className="text-white hover:bg-white/20 hover:text-white"
+                  >
+                    <X className="size-4" />
+                  </Button>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          <motion.p
+            key={filteredEvents.length}
+            className="mt-2 text-sm text-purple-300 font-sans"
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={defaultTransition}
+          >
+            Showing {filteredEvents.length} of {events.length} events
+          </motion.p>
+        </MotionInView>
 
-            {query !== "" && (
-              <button
-                type="button"
-                onClick={clearQuery}
-                aria-label="Clear search"
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-white bg-white/10 hover:bg-white/20 rounded-full p-1.5 z-10"
+        <motion.div
+          layout
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4 sm:gap-6 mt-6 w-full"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredEvents.length === 0 ? (
+              <motion.div
+                key="empty"
+                className="col-span-full text-left text-purple-300 py-12 font-sans"
+                initial={prefersReducedMotion ? false : { opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                variants={fadeInUp}
               >
-                <X className="w-4 h-4" />
-              </button>
+                No events found. Try a different search term.
+              </motion.div>
+            ) : (
+              filteredEvents.map((event) => (
+                <Event key={event.title} {...event} />
+              ))
             )}
-          </div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-10 mt-6">
-        {filteredEvents.length === 0 ? (
-          <div className="col-span-full text-center text-gray-300 py-8">
-            No events found.
-          </div>
-        ) : (
-          filteredEvents.map((event, index) => <Event key={index} {...event} />)
-        )}
-      </div>
+          </AnimatePresence>
+        </motion.div>
+      </PageContainer>
     </>
   );
 }

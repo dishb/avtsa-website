@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import "./globals.css";
+import Footer from "@/components/Footer";
+import "@/app/globals.css";
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
+  style: ["normal", "italic"],
+});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-ibm-plex-sans",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
   style: ["normal", "italic"],
 });
 
@@ -22,11 +31,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${ibmPlexMono.className} flex flex-col min-h-screen`}>
+    <html lang="en" className={ibmPlexSans.variable}>
+      <body
+        className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${ibmPlexMono.className} flex flex-col min-h-screen antialiased`}
+      >
         <Navbar />
-        <main>{children}</main>
-        <footer className="w-screen"></footer>
+        <main className="flex-1 w-full">{children}</main>
+        <Footer />
       </body>
     </html>
   );
